@@ -1,5 +1,3 @@
-# Python program to read CSV file line by line
-# import necessary packages
 import mysql.connector
 import csv
 csv.field_size_limit(100000000)
@@ -15,12 +13,6 @@ mydb = mysql.connector.connect(
 # which is used to execute the 'SQL'
 # statements in 'Python'
 cursor = mydb.cursor()
-
-# Creating a database with a name
-# 'geeksforgeeks' execute() method
-# is used to compile a SQL statement
-# below statement is used to create
-# the 'geeksforgeeks' database
 
 
 # Open file
