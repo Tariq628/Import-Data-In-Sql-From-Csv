@@ -7,7 +7,7 @@ mydb = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="tariq"
+    database=""
 )
 
 
@@ -18,13 +18,6 @@ with open('domains_export.csv', "r", encoding='utf-8') as file_obj:
     reader_obj = pd.read_csv(file_obj, on_bad_lines='skip')
     print(reader_obj)
     for i, row in enumerate(reader_obj):
-
-        # print(row.values.tolist())
-        # row = row.values.tolist()
-        # print(row[0])
-        # if i < 3840540:
-        #     print('andar', i)
-        #     continue
 
         try:
             sql = """INSERT INTO new_domains (
@@ -182,17 +175,5 @@ with open('domains_export.csv', "r", encoding='utf-8') as file_obj:
             print(i)
             mydb.commit()
         except Exception as e:
-            print("j")
-            # print(e)
+            print(e)
 
-# Create reader object by passing the file
-# object to reader method
-# reader_obj = csv.reader(file_obj)
-
-# Iterate over each row in the csv
-# file using reader object
-# for row in reader_obj:
-#     print(row)
-
-
-# with open('domains_export (1).csv') as file_obj:
