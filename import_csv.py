@@ -1,5 +1,3 @@
-# Python program to read CSV file line by line
-# import necessary packages
 import mysql.connector
 import csv
 
@@ -10,16 +8,7 @@ mydb = mysql.connector.connect(
     database="tariq"
 )
 
-# Creating an instance of 'cursor' class
-# which is used to execute the 'SQL'
-# statements in 'Python'
 cursor = mydb.cursor()
-
-# Creating a database with a name
-# 'geeksforgeeks' execute() method
-# is used to compile a SQL statement
-# below statement is used to create
-# the 'geeksforgeeks' database
 
 
 t = ''
